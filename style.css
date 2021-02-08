@@ -207,28 +207,28 @@ label, .input-search-text {
     bottom: 30px;
     margin-left: -50px;
 }
-.squar {    
-    list-style-type: none;
+
+.slide-squar > li {
     float: left;
-    width: 10px;
-    height: 10px;
-    border: 1px solid white;
-    margin-right: 20px;
-}
-.squar:active {
-    background-color: white;
-}
-.slide-squar > .white {
-    background-color: white;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 .slide-squar> li:last-child {
     margin-right: 0;
 }
-.squar {
+input[type="radio"]:checked + label::before {
+    background-color: white;
+}
+input[type="radio"] {
+    display: none;
+}
+/* .squar {
     width: 10px;
     height: 10px;
     border: 1px solid white;
-}
+} */
+
+
 .filter {
     width: 270px;
     height: 845px;
@@ -237,21 +237,40 @@ label, .input-search-text {
     color: white;
     font-size: 21px;
     font-weight: 300;
-    line-height: 1.85;
+    line-height: 1.75;
     background-color: rgba(255, 255, 255, 0.2);
+    border-right: 1px solid white;
+}
+
+[class*="_type"] {
+    margin: 30px 25px 0 25px;
+    padding-bottom: 30px;
 }
 .upper {
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 700;
 }
-.device_type, .color_type {
-    padding-bottom: 65px;
-} 
-.ram_type {
-    padding-bottom: 30px;
+label::before{
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 1px solid white;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 1px;
 }
+input[type="checkbox"]:checked + label::before {
+    background-color: white;
+}
+input[type="checkbox"] {
+    display: none;
+}
+ 
+
 .options {
     text-align: center;
+    margin: 0;
 }
 .options > a {
     text-decoration: none;
@@ -260,8 +279,7 @@ label, .input-search-text {
 .submit {
     width: 210px;
     height: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 15px;
     text-align: center;
     font-size: 21px;
     color: white;
@@ -271,7 +289,7 @@ label, .input-search-text {
     
     margin-top: 30px;
 }
-.submit:active {
+submit:active {
     background-color: rgba(255, 255, 255, 0.2);
     outline: white;
 }
@@ -474,6 +492,7 @@ label, .input-search-text {
     height: 48px;
     background-color: rgba(44, 113, 184, 1);
     border: 1px solid white;
+    border-radius: 0px;
     color: white;
     text-transform: uppercase;
     font-weight: 700;
@@ -481,15 +500,15 @@ label, .input-search-text {
     margin-left: auto;
     margin-right: auto;
 }
-.details:active {
+-.details:active {
     background-color: rgba(255, 255, 255, 0.2);
 }
 .add{
     background-color: rgba(255, 255, 255, 0.2);
     margin-bottom: 14px;
 }
-.add:active {
-    background-color: rgba(44, 113, 184, 1);
+.add:hover, .details:hover, .submit:hover {
+    background-color: rgba(238, 241, 245, 0.6);
 }
 .load-more {
     text-align: center;
