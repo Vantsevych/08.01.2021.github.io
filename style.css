@@ -448,6 +448,11 @@ submit:active {
     top: 40px;
     left: 100px;
 }
+.img_device_16 {
+    position: absolute;
+    top: 60px;
+    right: 83px;
+}
 .cart-body {
     background-color: rgba(44, 113, 184, 0.75);
     margin: -15px -15px -30px -15px;
