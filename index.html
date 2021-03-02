@@ -60,7 +60,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="troley">
-                                <div class="total">4</div>
+                                <div class="total" id="products-count">0</div>
                                 <img src="img/icon (1).png" alt="">
 
                             </div>
@@ -203,7 +203,7 @@
                             <div class="image">
                                 <div class="images">
                                     <img class="img-focus" src="img/icon (8).png" alt="">
-                                    <img class="img-hurt" src="img/icon (5).png" alt="">
+                                    <img class="img-hurt liked" src="img/icon (5).png" alt="">
                                 </div>
                                 <div class="img_device">
                                     <img src="img/icon (17).png" alt="">
@@ -224,6 +224,13 @@
                                 <div class="body- ram">
                                     <span>ram:</span> 1GB
                                 </div>
+
+                                <div class="product-quantity">
+                                    <button class="decrement-button">-</button>
+                                    <input type="text" value="1">
+                                    <button class="increment-button">+</button>
+                                </div>
+
                                 <div class="price">$599 <span>25</span></div>
                                 <div>
                                     <form class="buttons">
@@ -239,7 +246,7 @@
                             <div class="image">
                                 <div class="images">
                                     <img class="img-focus" src="img/icon (8).png" alt="">
-                                    <img class="img-hurt-active" src="img/icon (7).png" alt="">
+                                    <img class="img-hurt img-hurt-active" src="img/icon (7).png" alt="">
                                 </div>
                                 <div class="img_device">
                                     <img src="img/icon (9).png" alt="">
@@ -260,6 +267,13 @@
                                 <div class="body- ram">
                                     <span>ram:</span> 1GB
                                 </div>
+
+                                <div class="element-quantity">
+                                    <button class="decrement-button-element">-</button>
+                                    <input type="text" value="1">
+                                    <button class="increment-button-element">+</button>
+                                </div>
+
                                 <div class="price">$1250 <span>99</span></div>
                                 <div>
                                     <form class="buttons">
@@ -296,6 +310,13 @@
                                 <div class="body- ram">
                                     <span>ram:</span> 1GB
                                 </div>
+
+                                <div class="quantity">
+                                    <button class="decrement">-</button>
+                                    <input type="text" value="1">
+                                    <button class="increment">+</button>
+                                </div>
+
                                 <div class="price">$399 <span>50</span></div>
                                 <div>
                                     <form class="buttons">
@@ -543,8 +564,29 @@
 
 
 
-
+ 
     <footer class="footer">Copyright 2017</footer>
+
+<!-- modal -->
+
+    <div class="modal">
+        <div class="modal-block">
+            <form>
+                <div class="close-btn">X</div>
+                <h3>Please call for more details</h3>
+                <div class="form-field">
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div class="form-field">
+                    <input type="text" placeholder="Your phone">
+                </div>
+                <button>Please Call</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
