@@ -7,13 +7,19 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header class="header">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-3">
                     <div class="logo">
@@ -74,10 +80,21 @@
     <main class="main">
         <div class="container-main">
             <div class="container">
-                <div class="row slide">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="slider-block">
+                            <div>slider 1</div>
+                            <div>slider 2</div>
+                            <div>slider 3</div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- <div class="row slide">
                     <ul class="slide-squar">
                         <li>
-                            <input type="radio" id="page-first"  name="page" value="first">
+                            <input type="radio" id="page-first" name="page" value="first">
                             <label for="page-first"></label>
                         </li>
                         <li>
@@ -96,7 +113,7 @@
                     <div class="col-md-3 img-left-arrow"><img src="img/icons-left-back-50.png" alt=""></div>
                     <div class="col-md-6">Slide 3</div>
                     <div class="col-md-3 img-right-arrow"><img src="img/icons-right-forward-50.png" alt=""></div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container">
@@ -268,10 +285,10 @@
                                     <span>ram:</span> 1GB
                                 </div>
 
-                                <div class="element-quantity">
-                                    <button class="decrement-button-element">-</button>
+                                <div class="product-quantity">
+                                    <button class="decrement-button">-</button>
                                     <input type="text" value="1">
-                                    <button class="increment-button-element">+</button>
+                                    <button class="increment-button">+</button>
                                 </div>
 
                                 <div class="price">$1250 <span>99</span></div>
@@ -311,10 +328,10 @@
                                     <span>ram:</span> 1GB
                                 </div>
 
-                                <div class="quantity">
-                                    <button class="decrement">-</button>
+                                <div class="product-quantity">
+                                    <button class="decrement-button">-</button>
                                     <input type="text" value="1">
-                                    <button class="increment">+</button>
+                                    <button class="increment-button">+</button>
                                 </div>
 
                                 <div class="price">$399 <span>50</span></div>
@@ -354,6 +371,13 @@
                                 <div class="body- ram">
                                     <span>ram:</span> 1GB
                                 </div>
+
+                                <div class="product-quantity">
+                                    <button class="decrement-button">-</button>
+                                    <input type="text" value="1">
+                                    <button class="increment-button">+</button>
+                                </div>
+
                                 <div class="price">$599 <span>25</span></div>
                                 <div>
                                     <form class="buttons">
@@ -391,6 +415,13 @@
                                 <div class="body- ram">
                                     <span>ram:</span> 1GB
                                 </div>
+
+                                <div class="product-quantity">
+                                    <button class="decrement-button">-</button>
+                                    <input type="text" value="1">
+                                    <button class="increment-button">+</button>
+                                </div>
+
                                 <div class="price">$1250 <span>99</span></div>
                                 <div>
                                     <form class="buttons">
@@ -428,6 +459,13 @@
                                 <div class="body- ram">
                                     <span>ram:</span> 1GB
                                 </div>
+
+                                <div class="product-quantity">
+                                    <button class="decrement-button">-</button>
+                                    <input type="text" value="1">
+                                    <button class="increment-button">+</button>
+                                </div>
+
                                 <div class="price">$399 <span>50</span></div>
                                 <div>
                                     <form class="buttons">
@@ -464,6 +502,13 @@
                                 <div class="body- ram">
                                     <span>ram:</span> 1GB
                                 </div>
+
+                                <div class="product-quantity">
+                                    <button class="decrement-button">-</button>
+                                    <input type="text" value="1">
+                                    <button class="increment-button">+</button>
+                                </div>
+
                                 <div class="price">$599 <span>25</span></div>
                                 <div>
                                     <form class="buttons">
@@ -500,6 +545,13 @@
                                 <div class="body- ram">
                                     <span>ram:</span> 1GB
                                 </div>
+
+                                <div class="product-quantity">
+                                    <button class="decrement-button">-</button>
+                                    <input type="text" value="1">
+                                    <button class="increment-button">+</button>
+                                </div>
+
                                 <div class="price">$1250 <span>99</span></div>
                                 <div>
                                     <form class="buttons">
@@ -538,6 +590,13 @@
                                 <div class="body- ram">
                                     <span>ram:</span> 1GB
                                 </div>
+
+                                <div class="product-quantity">
+                                    <button class="decrement-button">-</button>
+                                    <input type="text" value="1">
+                                    <button class="increment-button">+</button>
+                                </div>
+
                                 <div class="price">$399 <span>50</span></div>
                                 <div>
                                     <form class="buttons">
@@ -560,14 +619,14 @@
         </div>
     </main>
 
+    
 
 
 
 
- 
     <footer class="footer">Copyright 2017</footer>
 
-<!-- modal -->
+    <!-- modal -->
 
     <div class="modal">
         <div class="modal-block">
@@ -586,6 +645,10 @@
         </div>
     </div>
 
+
+    <script type="text/javascript" src="httrs://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="app.js"></script>
 </body>
 
