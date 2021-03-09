@@ -213,7 +213,7 @@ label, .input-search-text {
 
 
 
-.slide {
+/* .slide {
     color: white;
     text-align: center;
     font-size: 100px;
@@ -234,13 +234,13 @@ label, .input-search-text {
 }
 .slide-squar> li:last-child {
     margin-right: 0;
-}
-input[type="radio"]:checked + label::before {
+} */
+/* input[type="radio"]:checked + label::before {
     background-color: white;
 }
 input[type="radio"] {
     display: none;
-}
+} */
 /* .squar {
     width: 10px;
     height: 10px;

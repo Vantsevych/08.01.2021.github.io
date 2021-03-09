@@ -192,51 +192,102 @@ window.addEventListener("scroll",showModalByScroll)
 // })
 
 
-//change product quantity профі метод
+//change product quantity профі метод OOP (Object Oriant Program)
 
 let decrementBtns = document.querySelectorAll(".decrement-button");
 let incrementBtns = document.querySelectorAll(".increment-button");
 let productsQuantity = document.querySelectorAll(".product-quantity input");
 
+function Counter (incrementBtn, decrementBtn, inputField) {
+    this.domRefs = {
+        incrementBtn, 
+        decrementBtn, 
+        inputField
+    }
 
-for (let i = 0; i < productsQuantity.length; i++) {
-    let currentCount = +productsQuantity[i].value;
-    toggleButtonState(currentCount,decrementBtn, incrementBtn);
+    this.toggleButtonState = function () {
+        const count = +this.domRefs.inputField.value;
+
+        this.domRefs.decrementBtn.disabled = count <= 1;
+        this.domRefs.incrementBtn.disabled = count >= 5;
+    }
+    this.toggleButtonState()
+
+    this.increment = function() {
+        let courentCount = +this.domRefs.inputField.value;
+        let nextCount = courentCount + 1;
+        this.domRefs.inputField.value = nextCount;
+
+        this.toggleButtonState();
+    }
+    this.domRefs.incrementBtn.addEventListener("click",this.increment.bind(this))
+
+
+    this.decrement = function () {
+        let courentCount = +this.domRefs.inputField.value;
+        let nextCount = courentCount - 1;
+        this.domRefs.inputField.value = nextCount;
+
+        this.toggleButtonState();
+    }
+    this.domRefs.decrementBtn.addEventListener("click", this.decrement.bind(this))
 }
 
-
-function toggleButtonState(count, decrementBtn, incrementBtn) {
-    decrementBtn.disabled = count <= 1;
-    incrementBtn.disabled = count >= 5;
-}
+const counter1 = new Counter (incrementBtns[0], decrementBtns[0], productsQuantity[0])
+console.log(counter1)
 
 
 
 
-for ( let i = 0; i < incrementBtns.length; i++) {
-    incrementBtns[i].addEventListener("click", function() {
-    let currentCount = +productsQuantity[i].value;
-    let nextCount = currentCount + 1;
-    productsQuantity[i].value = nextCount;
 
-    toggleButtonState(nextCount,incrementBtns, decrementBtns);
-})
-}
 
-for ( let i = 0; i < incrementBtns.length; i++) {
-    decrementBtns[i].addEventListener("click", function() {
-    let currentCount = +productsQuantity[i].value;
-    let nextCount = currentCount - 1;
-    productsQuantity[i].value = nextCount;
 
-    toggleButtonState(nextCount,incrementBtns, decrementBtns);
-})
-}
+
+
+
+// for (let i = 0; i < productsQuantity.length; i++) {
+//     let currentCount = +productsQuantity[i].value;
+//     toggleButtonState(currentCount,decrementBtn, incrementBtn);
+// }
+
+
+// function toggleButtonState(count, decrementBtn, incrementBtn) {
+    
+// }
+
+
+
+
+// for ( let i = 0; i < incrementBtns.length; i++) {
+//     incrementBtns[i].addEventListener("click", function() {
+//     let currentCount = +productsQuantity[i].value;
+//     let nextCount = currentCount + 1;
+//     productsQuantity[i].value = nextCount;
+
+//     toggleButtonState(nextCount,incrementBtns, decrementBtns);
+// })
+// }
+
+// for ( let i = 0; i < incrementBtns.length; i++) {
+//     decrementBtns[i].addEventListener("click", function() {
+//     let currentCount = +productsQuantity[i].value;
+//     let nextCount = currentCount - 1;
+//     productsQuantity[i].value = nextCount;
+
+//     toggleButtonState(nextCount,incrementBtns, decrementBtns);
+// })
+// }
+
+
+
+
 
 
 // add slider slick
 
-    $(".slider-block").slick();
+    $(".slider-block").slick({
+        dots:true
+    }); 
 
 
 
@@ -287,10 +338,10 @@ for ( let i = 0; i < incrementBtns.length; i++) {
 
 
 
-const arr = [1, 2, 3, 4, 5]
+// const arr = [1, 2, 3, 4, 5]
 
-const getSums = arr.map(function(num, index) {
-return num + index
-})
+// const getSums = arr.map(function(num, index) {
+// return num + index
+// })
 
-console.log(getSums)
+// console.log(getSums)
